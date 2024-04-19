@@ -1,0 +1,17 @@
+- [**Autonomes Fahren und soziale Akzeptanz: konzeptionelle Überlegungen und empirische Einsichten**](80-Artikeltext-110-1-10-20220309.pdf) 
+	- Online (19.04.2024): https://journals.qucosa.de/jmv/article/view/79/69
+- [Autonomes Fahren – Chancen und Herausforderungen](Autonomes%20Fahren%20-%20Chancen%20und%20Herausforderungen%20Zukunft%20Mobilität.pdf)
+	- Online (19.04.2024): https://www.zukunft-mobilitaet.net/170765/strassenverkehr/autonomes-fahren-chancen-und-herausforderungen-sae-level5/
+- [Der Haken ist bei uns im Kopf](Forscher%20über%20selbstfahrende%20Autos%20„Der%20Haken%20ist%20bei%20uns%20im%20Kopf“%20-%20taz.de.pdf)
+	- Online (19.04.2024): https://taz.de/Forscher-ueber-selbstfahrende-Autos/!5970072/
+- [Zur gesellschaftlichen Wahrnehmung des voll autonomen Fahrens und seiner möglichen nachhaltigkeitsbezogenen Implikationen](Zur%20gesellschaftlichen%20Wahrnehmung%20des%20voll%20autonomen%20Fahrens%20und%20seiner%20möglichen%20nachhaltigkeitsbezogenen%20Implikationen.pdf)
+	- Online (19.04.2024): https://www.tatup.de/index.php/tatup/article/download/127/196?inline=1?inline=1
+- [Autonomes Fahren - Technische, rechtliche und gesellschaftliche Aspekte](978-3-662-45854-9.pdf)
+	- Buch (19.04.2024): ISBN=978-3-662-45854-9
+	- Notizen:
+		- Spezifisch Kapitel 29 ist interessant
+- [Aktionsplan Forschung für Autonomes Fahren](24688_Aktionsplan_Forschung_fuer_autonomes_Fahren.pdf)
+	- Online (19.04.2024): https://www.bmbf.de/SharedDocs/Publikationen/de/bmbf/5/24688_Aktionsplan_Forschung_fuer_autonomes_Fahren.pdf?__blob=publicationFile&v=3
+- [Wie sozial akzeptiert ist autonomes Fahren?](Wie%20sozial%20akzeptiert%20ist%20autonomes%20Fahren%20Forschungsinstitut%20für%20Nachhaltigkeit.pdf)
+	- Online (19.04.2024): https://www.rifs-potsdam.de/de/news/wie-sozial-akzeptiert-ist-autonomes-fahren
+- 
