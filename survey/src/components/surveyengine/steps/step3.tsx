@@ -12,6 +12,7 @@ interface Step3State {
         schlechteSicht: boolean,
         kurzeBesorgungen: boolean,
         fahrtenMitKindern: boolean,
+        altePersonen: boolean,
     },
     q2Result: number,
     q3Result: number,
@@ -29,6 +30,7 @@ export const useStep3 = create<Step3State>((set) => ({
         schlechteSicht: false,
         kurzeBesorgungen: false,
         fahrtenMitKindern: false,
+        altePersonen: false,
     },
     q2Result: 0,
     q3Result: 0,
@@ -79,6 +81,10 @@ export function Step3Usage() {
                         <div className="flex items-center gap-2">
                             <Switch id="kurzeBesorgungen" className="border border-neutral-700" onCheckedChange={(checked) => data.setSituationResult("kurzeBesorgungen", checked)}/>
                             <Label htmlFor="kurzeBesorgungen">Kurze Besorgungen</Label>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Switch id="altePersonen" className="border border-neutral-700" onCheckedChange={(checked) => data.setSituationResult("altePersonen", checked)}/>
+                            <Label htmlFor="altePersonen">Fahrten als alte Person</Label>
                         </div>
                         {state1.hasChildren && <div className="flex items-center gap-2">
                             <Switch id="fahrtenMitKindern" className="border border-neutral-700" onCheckedChange={(checked) => data.setSituationResult("fahrtenMitKindern", checked)}/>
