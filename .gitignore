@@ -2,3 +2,6 @@
 *.iml
 .vscode
 .obsidian
+venv/
+.venv/
+__pycache__

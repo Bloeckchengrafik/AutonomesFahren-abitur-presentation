@@ -11,7 +11,7 @@
 	- Notizen:
 		- Spezifisch Kapitel 29 ist interessant
 - [Aktionsplan Forschung für Autonomes Fahren](24688_Aktionsplan_Forschung_fuer_autonomes_Fahren.pdf)
-	- Online (19.04.2024): https://www.bmbf.de/SharedDocs/Publikationen/de/bmbf/5/24688_Aktionsplan_Forschung_fuer_autonomes_Fahren.pdf?__blob=publicationFile&v=3
+	- Online (13.05.2024): https://www.bmbf.de/SharedDocs/Publikationen/de/bmbf/5/24688_Aktionsplan_Forschung_fuer_autonomes_Fahren.pdf?__blob=publicationFile&v=3
 - [Wie sozial akzeptiert ist autonomes Fahren?](Wie%20sozial%20akzeptiert%20ist%20autonomes%20Fahren%20Forschungsinstitut%20für%20Nachhaltigkeit.pdf)
-	- Online (19.04.2024): https://www.rifs-potsdam.de/de/news/wie-sozial-akzeptiert-ist-autonomes-fahren
+	- Online (13.05.2024): https://www.rifs-potsdam.de/de/news/wie-sozial-akzeptiert-ist-autonomes-fahren
 - 
