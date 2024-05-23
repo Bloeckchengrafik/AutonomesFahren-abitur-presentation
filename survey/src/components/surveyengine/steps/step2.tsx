@@ -1,6 +1,7 @@
 import {create} from "zustand"
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card.tsx";
 import {SliderInput} from "@/components/surveyengine/SliderInput.tsx";
+import {useStep1} from "@/components/surveyengine/steps/step1.tsx";
 
 interface Step2State {
     q1: number | null,
@@ -35,12 +36,13 @@ export const useStep2 = create<Step2State>((set) => ({
 }))
 
 export function validateStep2(state: Step2State): boolean {
-    return !!state.q1 && !!state.q2 && !!state.q3 && !!state.q4
+    return !!state.q1 && !!state.q2 && !!state.q3
 }
 
 
 export function Step2Advantages() {
     const data = useStep2()
+    const state1 = useStep1()
 
     return <div className="mt-8 flex justify-center">
         <div className="w-full">
@@ -53,14 +55,31 @@ export function Step2Advantages() {
                 <CardContent>
                     <SliderInput
                         label="Wie sicher würden Sie sich fühlen, wenn Sie mit einem voll autonom betriebenen Auto fahren würden?"
-                        best="Sehr Sicher" worst="Sehr Unsicher" onChange={data.setQ1Result}/>
-                    <SliderInput label="Würden Sie der Technologie eines autonomen Autos vertrauen?"
-                                 best="Sehr Vertrauen" worst="Sehr Unvertrauen" onChange={data.setQ2Result}/>
-                    <SliderInput label="Wie sehr vertrauen Sie generell in Technik?" best="Sehr Vertrauen"
-                                 worst="Sehr Unvertrauen" onChange={data.setQ3Result}/>
+                        best="Sehr Sicher"
+                        worst="Sehr Unsicher"
+                        onChange={data.setQ1Result}
+                    />
+
+                    {state1.hasChildren && <SliderInput
+                        label="Wie sicher würden Sie sich fühlen, wenn Ihr Kind mit einem voll autonom betriebenen Auto fahren würden?"
+                        best="Sehr Sicher"
+                        worst="Sehr Unsicher"
+                        onChange={data.setQ4Result}
+                    />}
+
                     <SliderInput
-                        label="Wie sicher würden Sie sich fühlen, wenn Sie mit einem voll autonom betriebenen Auto fahren würden?"
-                        best="Sehr Sicher" worst="Sehr Unsicher" onChange={data.setQ4Result}/>
+                        label="Würden Sie der Technologie eines autonomen Autos vertrauen?"
+                        best="Sehr Sicher"
+                        worst="Sehr Unsicher"
+                        onChange={data.setQ2Result}
+                    />
+
+                    <SliderInput
+                        label="Wie sehr vertrauen Sie generell in Technik?"
+                        best="Volles Vertrauen"
+                        worst="Kein Vertrauen"
+                        onChange={data.setQ3Result}
+                    />
                 </CardContent>
             </Card>
         </div>

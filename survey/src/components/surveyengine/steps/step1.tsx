@@ -85,7 +85,7 @@ export function Step1GetPersonalInfo() {
                             <SelectValue placeholder="Bitte Wählen"/>
                         </SelectTrigger>
                         <SelectContent>
-                            <SelectItem value="-24">-24</SelectItem>
+                            <SelectItem value="-24">Bis 24</SelectItem>
                             <SelectItem value="25-34">25-34</SelectItem>
                             <SelectItem value="35-44">35-44</SelectItem>
                             <SelectItem value="45-54">45-54</SelectItem>
@@ -107,7 +107,7 @@ export function Step1GetPersonalInfo() {
                     </Select>
                     <br/>
                     <div className="flex gap-2 items-center">
-                        <Switch id="hasChildren" className="border border-neutral-700"/>
+                        <Switch id="hasChildren" className="border border-neutral-700" onCheckedChange={(checked) => data.setHasChildren(checked)}/>
                         <Label htmlFor="hasChildren">Haben Sie Kinder?</Label>
                     </div>
                 </CardContent>
