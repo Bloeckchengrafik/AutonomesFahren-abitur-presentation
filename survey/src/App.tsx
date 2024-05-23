@@ -1,17 +1,17 @@
 import Nav from "./components/Nav"
-import CurrentStep from "./surveyengine/Steps"
+import CurrentStep from "@/components/surveyengine/Steps"
 
 function App() {
-  return (
-    <div className="w-full min-h-screen bg-background">
-      <div className="max-w-3xl mx-auto p-4">
-        <Nav />
-        <div className="mt-4">
-          <CurrentStep />
+    return (
+        <div className="w-full min-h-screen bg-background flex flex-col">
+            <div className="max-w-4xl w-full mx-auto p-4 flex-1 flex flex-col">
+                <Nav/>
+                <div className="mt-4 flex-1 flex flex-col w-full">
+                    <CurrentStep/>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
+    )
 }
 
 export default App
