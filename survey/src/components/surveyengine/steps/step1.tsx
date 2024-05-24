@@ -5,6 +5,7 @@ import {Input} from "@/components/ui/input.tsx";
 import {Select} from "@radix-ui/react-select";
 import {SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select.tsx";
 import {Switch} from "@/components/ui/switch.tsx";
+import {useEffect} from "react";
 
 export type AgeRange = "-24" | "25-34" | "35-44" | "45-54" | "55-64" | "65+"
 
@@ -62,6 +63,10 @@ export function Step1GetPersonalInfo() {
 
     //TODO auto-detect country
     //TODO zipcode -> urban/rural
+
+    useEffect(() => {
+        data.setCountry("Deutschland")
+    }, [])
 
     return <div className="mt-8 flex justify-center">
         <div className="w-full">
