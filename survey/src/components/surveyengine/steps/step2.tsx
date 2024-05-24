@@ -2,6 +2,8 @@ import {create} from "zustand"
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card.tsx";
 import {SliderInput} from "@/components/surveyengine/SliderInput.tsx";
 import {useStep1} from "@/components/surveyengine/steps/step1.tsx";
+import {Label} from "@/components/ui/label.tsx";
+import {Input} from "@/components/ui/input.tsx";
 
 interface Step2State {
     q1: number | null,
@@ -54,18 +56,20 @@ export function Step2Advantages() {
                 </CardHeader>
                 <CardContent>
                     <SliderInput
-                        label="Wie sicher würden Sie sich fühlen, wenn Sie mit einem voll autonom betriebenen Auto fahren würden?"
+                        label="Wie würden Sie sich fühlen, mit einem voll autonom betriebenen Auto zu fahren?"
                         best="Sehr Sicher"
                         worst="Sehr Unsicher"
                         onChange={data.setQ1Result}
                     />
 
-                    {state1.hasChildren && <SliderInput
-                        label="Wie sicher würden Sie sich fühlen, wenn Ihr Kind mit einem voll autonom betriebenen Auto fahren würden?"
-                        best="Sehr Sicher"
-                        worst="Sehr Unsicher"
-                        onChange={data.setQ4Result}
-                    />}
+                    {state1.hasChildren && <>
+                        <Label>Ab welchem Alter würden Sie ihr Kind alleine mit einem voll autonom betriebenen Auto
+                            fahren lassen?</Label>
+                        <Input type="number" placeholder="0" min={0} max={17}
+                               defaultValue="0"
+                               onChange={(e) => data.setQ4Result(parseInt(e.target.value))}
+                        />
+                    </>}
 
                     <SliderInput
                         label="Würden Sie der Technologie eines autonomen Autos vertrauen?"

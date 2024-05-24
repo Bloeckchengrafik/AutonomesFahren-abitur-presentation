@@ -60,6 +60,9 @@ export function validateStep1(state: Step1State): boolean {
 export function Step1GetPersonalInfo() {
     const data = useStep1()
 
+    //TODO auto-detect country
+    //TODO zipcode -> urban/rural
+
     return <div className="mt-8 flex justify-center">
         <div className="w-full">
             <Card className="border-neutral-700">
@@ -71,11 +74,12 @@ export function Step1GetPersonalInfo() {
                 <CardContent>
                     <Label htmlFor="country">Land</Label>
                     <Input id="country" type="text" placeholder="Deutschland"
+                           defaultValue="Deutschland"
                            onInput={(e) => data.setCountry((e.target as HTMLInputElement).value)}
                     />
                     <br/>
                     <Label htmlFor="zipcode">Postleitzahl</Label>
-                    <Input id="zipcode" type="text" placeholder="000000"
+                    <Input id="zipcode" type="text" placeholder=""
                            onInput={(e) => data.setZipcode((e.target as HTMLInputElement).value)}
                     />
                     <br/>
@@ -108,7 +112,7 @@ export function Step1GetPersonalInfo() {
                     <br/>
                     <div className="flex gap-2 items-center">
                         <Switch id="hasChildren" className="border border-neutral-700" onCheckedChange={(checked) => data.setHasChildren(checked)}/>
-                        <Label htmlFor="hasChildren">Haben Sie Kinder?</Label>
+                        <Label htmlFor="hasChildren">Ich habe Kinder</Label>
                     </div>
                 </CardContent>
             </Card>

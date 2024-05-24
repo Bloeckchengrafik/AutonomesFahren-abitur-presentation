@@ -64,7 +64,7 @@ export function Step3Usage() {
                     </CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <h1 className="text-xl">In welchen Situationen würden autonome Fahrzeuge die Autofahrt verbessern?</h1>
+                    <h1 className="text-xl">Welche Situationen würden das autonome Fahren verbessern?</h1>
                     <div className="flex flex-col gap-2 pl-4 pt-2 pb-8">
                         <div className="flex items-center gap-2">
                             <Switch id="pendeln" className="border border-neutral-700" onCheckedChange={(checked) => data.setSituationResult("pendeln", checked)}/>
@@ -93,7 +93,7 @@ export function Step3Usage() {
                     </div>
 
                     <SliderInput
-                        label="Denken Sie, dass autonome Fahrzeuge aktuelle Probleme wie Staus, Verkehrssicherheit und Zugänglichkeit verbessern?"
+                        label="Denken Sie, dass autonome Fahrzeuge aktuelle Probleme wie Staus und Verkehrssicherheit verbessern?"
                         best="Nein, Gar nicht"
                         worst="Absolut"
                         onChange={data.setQ2Result}
@@ -101,7 +101,7 @@ export function Step3Usage() {
 
                     {state1.hasChildren &&
                         <SliderInput
-                            label="Würden autonome Fahrzeuge die Autofahrt mit Kindern erleichtern?"
+                            label="Würden autonome Fahrzeuge die Autofahrt gemeinsam mit Kindern erleichtern?"
                             best="Überhaupt nicht"
                             worst="Sehr Stark"
                             onChange={data.setQ3Result}
