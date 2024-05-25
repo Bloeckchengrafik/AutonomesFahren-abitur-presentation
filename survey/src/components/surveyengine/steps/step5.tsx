@@ -7,6 +7,7 @@ import {useStep1} from "@/components/surveyengine/steps/step1.tsx";
 import {useStep2} from "@/components/surveyengine/steps/step2.tsx";
 import {useStep3} from "@/components/surveyengine/steps/step3.tsx";
 import {LOCALE} from "@/lib/locales.ts";
+import {useStep4} from "@/components/surveyengine/steps/step4.tsx";
 
 function Step5SendAndThankYou() {
     function filterData(data: any): any {
@@ -23,7 +24,7 @@ function Step5SendAndThankYou() {
     const data1 = filterData(useStep1())
     const data2 = filterData(useStep2())
     const data3 = filterData(useStep3())
-    const data4 = filterData(useStep3())
+    const data4 = filterData(useStep4())
 
     useEffect(() => {
         // @ts-ignore
