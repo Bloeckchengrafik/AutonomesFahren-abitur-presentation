@@ -7,6 +7,7 @@ import {useStep3, validateStep3, Step3Usage} from "@/components/surveyengine/ste
 import {Step4Freeform, useStep4} from "@/components/surveyengine/steps/step4.tsx";
 import Step5SendAndThankYou from "@/components/surveyengine/steps/step5.tsx";
 import {logEventToDefaultSink} from "@/lib/firebase.ts";
+import {LOCALE} from "@/lib/locales.ts";
 
 const MAX_STEP = 5
 
@@ -14,11 +15,11 @@ function NextStepButton({setStep, validate}: { setStep: () => void, validate: ()
     if (!validate()) {
         return <div className="mt-8 flex justify-center">
             <Button onClick={() => {
-            }} disabled={true}>Weiter</Button>
+            }} disabled={true}>{LOCALE["next"]}</Button>
         </div>
     }
     return <div className="mt-8 flex justify-center">
-        <Button onClick={() => setStep()}>Weiter</Button>
+        <Button onClick={() => setStep()}>{LOCALE["next"]}</Button>
     </div>
 }
 

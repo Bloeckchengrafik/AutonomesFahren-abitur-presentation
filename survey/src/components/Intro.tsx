@@ -1,34 +1,28 @@
 import InfoDialog from "@/components/InfoDialog.tsx";
+import {LOCALE} from "@/lib/locales.ts";
 
 function Intro() {
     return (
         <div>
             <p className="my-8">
-                Hallo,
-                ich bin Christian Bergschneider und arbeite aktuell an einer Präsentation,
-                in der unter anderem soziale Aktzeptanz von autonomen Fahrzeugen untersucht wird.
+                {LOCALE["intro-hello"]}, <br/>
+                {LOCALE["intro-whoami"]}
                 <br/>
                 <br/>
-                Wenn Sie sich die Zeit nehmen, mir ein paar Fragen zu beantworten, würde mir
-                das sehr helfen!
+                {LOCALE["intro-what"]}
             </p>
 
-            <InfoDialog title="Was ist voll autonomes Fahren?">
-                Voll autonomes Fahren bedeutet, dass überhaupt kein Fahrer benötigt wird. Das Auto muss also auch ohne
-                Fahrer jede mögliche Verkehrssituation absolvieren können.
+            <InfoDialog title={LOCALE["intro-what-autonomous"]}>
+                {LOCALE["intro-what-autonomous-answer"]}
             </InfoDialog>
             <br />
-            <InfoDialog title="Was passiert mit meinen Daten?">
-                Ihre eingegebenen Daten werden nicht an Dritte weitergegeben. Sie werden nach
-                dem Absenden der Daten auf meinem Server verschlüsselt gespeichert. Nach der Auswertung
-                der Daten werden diese gelöscht und nur die Ergebnisse gespeichert und veröffentlicht.
+            <InfoDialog title={LOCALE["intro-what-data"]}>
+                {LOCALE["intro-what-data-answer"]}
 
                 <br/>
                 <br/>
 
-                Es werden keine weiteren personenbezogenen Daten (Name, E-Mail, Telefonnummer, IP-Adresse, etc.)
-                verarbeitet, nur
-                die Daten, die Sie in der Umfrage eingegeben haben.
+                {LOCALE["intro-what-data-answer-2"]}
             </InfoDialog>
         </div>
     );

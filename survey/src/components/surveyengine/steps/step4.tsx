@@ -2,6 +2,7 @@ import {create} from "zustand"
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card.tsx";
 import {useStep1} from "@/components/surveyengine/steps/step1.tsx";
 import {Textarea} from "@/components/ui/textarea.tsx";
+import {LOCALE} from "@/lib/locales.ts";
 
 interface Step4State {
     freeform: string
@@ -30,7 +31,7 @@ function FreeformInput({label, onChange}: { label: string, onChange: (n: string)
                 {label} <span className="text-neutral-500 text-sm">(optional)</span>
             </CardTitle>
             <Textarea
-                placeholder="Hier können Sie Ihre Anmerkungen einfügen"
+                placeholder={LOCALE["4-your-thoughts"]}
                 onChange={(e) => onChange(e.target.value)}
             />
         </div>
@@ -46,13 +47,13 @@ export function Step4Freeform() {
             <Card className="border-neutral-700">
                 <CardHeader>
                     <CardTitle className="text-2xl font-bold">
-                        Anmerkungen
+                        {LOCALE["4-card-title"]}
                     </CardTitle>
                 </CardHeader>
                 <CardContent>
-                    {state1.hasChildren && <FreeformInput label="Wie kann autonomes Fahren Familien mit Kindern helfen?"
+                    {state1.hasChildren && <FreeformInput label={LOCALE["4-freeform-parents-label"]}
                                                           onChange={data.setFreeformParents}/>}
-                    <FreeformInput label="Sonstige Anmerkungen" onChange={data.setFreeform}/>
+                    <FreeformInput label={LOCALE["4-freeform-label"]} onChange={data.setFreeform}/>
                 </CardContent>
             </Card>
         </div>

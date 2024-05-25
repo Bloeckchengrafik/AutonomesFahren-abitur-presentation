@@ -6,6 +6,7 @@ import {logEventToDefaultSink, submitToFirestore} from "@/lib/firebase.ts";
 import {useStep1} from "@/components/surveyengine/steps/step1.tsx";
 import {useStep2} from "@/components/surveyengine/steps/step2.tsx";
 import {useStep3} from "@/components/surveyengine/steps/step3.tsx";
+import {LOCALE} from "@/lib/locales.ts";
 
 function Step5SendAndThankYou() {
     function filterData(data: any): any {
@@ -50,7 +51,7 @@ function Step5SendAndThankYou() {
             <Card className="border-neutral-700">
                 <CardHeader>
                     <CardTitle className="text-2xl font-bold">
-                        Danke für Ihre Teilnahme!
+                        {LOCALE["5-card-title"]}
                     </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -63,7 +64,7 @@ function Step5SendAndThankYou() {
                     />
 
                     <p className="text-lg">
-                        Vielen Dank für Ihre Teilnahme! Sie helfen mir sehr bei der Umsetzung bei meiner Präsentation!
+                        {LOCALE["5-thankyou-text"]}
                     </p>
                 </CardContent>
             </Card>
