@@ -31,7 +31,7 @@ interface Step1State {
 
 export const useStep1 = create<Step1State>((set) => ({
     country: null,
-    zipcode: null,
+    zipcode: "0",
     ageRange: null,
     gender: null,
     hasChildren: false,
@@ -61,8 +61,11 @@ export function validateStep1(state: Step1State): boolean {
 export function Step1GetPersonalInfo() {
     const data = useStep1()
 
-    //TODO auto-detect country
-    //TODO zipcode -> urban/rural
+    const split = navigator.language.split("-")
+    let country = split[0]
+    if (split.length > 1) {
+        country = split[1]
+    }
 
     useEffect(() => {
         data.setCountry("Deutschland")
@@ -79,14 +82,13 @@ export function Step1GetPersonalInfo() {
                 <CardContent>
                     <Label htmlFor="country">Land</Label>
                     <Input id="country" type="text" placeholder="Deutschland"
-                           defaultValue="Deutschland"
+                           defaultValue={country}
                            onInput={(e) => data.setCountry((e.target as HTMLInputElement).value)}
                     />
                     <br/>
-                    <Label htmlFor="zipcode">Postleitzahl</Label>
-                    <Input id="zipcode" type="text" placeholder=""
-                           onInput={(e) => data.setZipcode((e.target as HTMLInputElement).value)}
-                    />
+                    <div className="flex items-center gap-2">
+                        <Label>Städtisch</Label> <Switch id="urban" className="border border-neutral-700 data-[state=checked]:bg-input" onCheckedChange={(checked) => data.setZipcode(checked ? "1" : "0")}/> <Label>Ländlich</Label>
+                    </div>
                     <br/>
                     <Label htmlFor="ageRange">Alter</Label>
                     <Select onValueChange={(value) => data.setAgeRange(value as AgeRange)}>
