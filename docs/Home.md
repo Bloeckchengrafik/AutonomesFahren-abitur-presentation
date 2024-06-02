@@ -19,6 +19,15 @@ WHERE hidden != "true"
 SORT file.ctime DESC
 ```
 
+## Fragestellung
+Wie kann autonomes Fahren mit möglichst wenigen negativen Folgen in der Gesellschaft möglichst effektiv genutzt werden?
+_Kommt darauf an_
+
+- Aktuelles Politisches Framework DE/EU
+- Soziale Chancen
+- Soziale und Technische Risiken
+- Was muss passieren, um autonomes Fahren effektiv zu nutzen?
+
 # Quellen
 ![](Quellen)
 
