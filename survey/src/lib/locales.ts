@@ -1,7 +1,7 @@
 const GERMAN = {
     "title": "Umfrage über autonomes Fahren",
     "intro-hello": "Hallo",
-    "intro-whoami" : "ich bin Christian Bergschneider und arbeite aktuell an einer Präsentation, in der unter anderem soziale Aktzeptanz von autonomen Fahrzeugen untersucht wird.",
+    "intro-whoami" : "ich bin Christian Bergschneider und arbeite aktuell an einer Präsentation, in der unter anderem soziale Akzeptanz von autonomen Fahrzeugen untersucht wird.",
     "intro-what": "Wenn Sie sich die Zeit nehmen, mir ein paar Fragen zu beantworten, würde mir das sehr helfen!",
     "intro-what-autonomous": "Was ist voll autonomes Fahren?",
     "intro-what-autonomous-answer": "Voll autonomes Fahren bedeutet, dass überhaupt kein Fahrer benötigt wird. Das Auto muss also auch ohne Fahrer jede mögliche Verkehrssituation absolvieren können.",

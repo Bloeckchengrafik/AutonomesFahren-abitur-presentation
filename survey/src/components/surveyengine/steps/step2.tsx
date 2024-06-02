@@ -38,7 +38,7 @@ export const useStep2 = create<Step2State>((set) => ({
 }))
 
 export function validateStep2(state: Step2State): boolean {
-    return !!state.q1 && !!state.q2 && !!state.q3
+    return state.q1 !== null && state.q2 !== null && state.q3 !== null
 }
 
 
