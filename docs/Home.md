@@ -20,7 +20,7 @@ SORT file.ctime DESC
 ```
 
 ## Fragestellung
-Wie kann autonomes Fahren mit möglichst wenigen negativen Folgen in der Gesellschaft möglichst effektiv genutzt werden?
+Wie kann autonomes Fahren bei der Lösung aktueller gesellschaftlicher Fragen risikoarm unterstützen?
 _Kommt darauf an_
 
 - Aktuelles Politisches Framework DE/EU
