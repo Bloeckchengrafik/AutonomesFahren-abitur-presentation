@@ -8,5 +8,12 @@ import logistics from './scenes/logistics?scene';
 import end from './scenes/end?scene';
 
 export default makeProject({
-  scenes: [intro, sae, politics, social, logistics, end],
+    scenes: [intro, sae, politics, social, logistics, end],
 });
+
+
+window.addEventListener("keydown", (e) => {
+    if (e.key == "Tab") {
+        document.dispatchEvent(new KeyboardEvent('keydown', {'key': ' '}));
+    }
+})

@@ -366,7 +366,7 @@ export default makeScene2D(function* (view) {
     view.add(<Circle size={600} ref={leftFrontCameraRef} fill={Theme.stroke} opacity={0} closed startAngle={-100}
                      endAngle={-10}/>);
     view.add(<Circle size={600} ref={rightFrontCameraRef} fill={Theme.stroke} opacity={0} closed startAngle={10}
-                     endAngle={80}/>);
+                     endAngle={100}/>);
 
     yield* all(
         centralCarRef().opacity(1, 0.5, easeInOutCubic),
