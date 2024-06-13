@@ -88,7 +88,6 @@ export default makeScene2D(function* (view) {
         delay(0.4, sicherheitRef().opacity(1, 0.5, easeInOutCubic))
     )
 
-    yield* beginSlide("two points")
 
     yield* all(
         delay(0.2, all(
@@ -103,26 +102,20 @@ export default makeScene2D(function* (view) {
         ))
     )
 
-    yield* beginSlide("Kinder")
-
     yield* all(
-        teilhabeRef().x(-300, 0.5, easeInOutCubic),
-        teilhabeRef().y(400, 0.5, easeInOutCubic),
-        sicherheitRef().x(300, 0.5, easeInOutCubic),
-        sicherheitRef().y(400, 0.5, easeInOutCubic),
+        teilhabeRef().x(-400, 0.5, easeInOutCubic),
+        teilhabeRef().y(-300, 0.5, easeInOutCubic),
+        sicherheitRef().x(400, 0.5, easeInOutCubic),
+        sicherheitRef().y(-300, 0.5, easeInOutCubic),
         sicherheitRef().opacity(0.7, 0.5, easeInOutCubic)
     )
 
     const babyIconRef = createRef<Rect>();
-    const familyIconRef = createRef<Rect>();
     const rollatorIconRef = createRef<Rect>();
 
     view.add(
-        <Rect layout gap={40} justifyContent={"start"} alignItems={"center"}>
+        <Rect layout gap={40} justifyContent={"start"} alignItems={"center"} x={-400} y={-150}>
             <Rect ref={babyIconRef} width={0} clip>
-                <Img src="../assets/baby.svg" size={100} width={100}/>
-            </Rect>
-            <Rect ref={familyIconRef} width={0} clip>
                 <Img src="../assets/UsersThree.svg" size={100} width={100}/>
             </Rect>
             <Rect ref={rollatorIconRef} width={0} clip>
@@ -132,39 +125,18 @@ export default makeScene2D(function* (view) {
     );
 
     yield* babyIconRef().width(100, 0.5, easeInOutCubic)
-    yield* beginSlide("Familien")
-    yield* familyIconRef().width(100, 0.5, easeInOutCubic)
-
-    const popupKinderRef = createRef<StatPopup>();
-    view.add(<StatPopup ref={popupKinderRef} image={"../assets/stats/situationen_mit_kindern.png"}/>);
-    yield* beginSlide("FamilienStats")
-
-    yield* popupKinderRef().animateIn()
-    yield* beginSlide("FamilienStatsOut")
-    yield* popupKinderRef().animateOut()
-    yield* familyIconRef().width(0, 0.5, easeInOutCubic)
 
     yield* beginSlide("Senioren")
     yield* rollatorIconRef().width(100, 0.5, easeInOutCubic)
 
     yield* beginSlide("SeniorenStats")
     const popupSeniorenRef = createRef<StatPopup>();
-    view.add(<StatPopup ref={popupSeniorenRef} image={"../assets/stats/situationen_mit_alten_personen.png"}/>);
+        view.add(<StatPopup ref={popupSeniorenRef} image={"../assets/stats/situationen_mit_alten_personen.png"} scale={0.8} y={200} x={-400}/>);
     yield* popupSeniorenRef().animateIn()
-    yield* beginSlide("SeniorenStatsEnd")
-    yield* popupSeniorenRef().animateOut()
 
     yield* beginSlide("Sicherheit")
 
     yield* all(
-        delay(0.2, all(
-            rollatorIconRef().width(0, 0.5, easeInOutCubic),
-            rollatorIconRef().opacity(0, 0.5, easeInOutCubic),
-        )),
-        delay(0.4, all(
-            babyIconRef().width(0, 0.5, easeInOutCubic),
-            babyIconRef().opacity(0, 0.5, easeInOutCubic),
-        )),
         teilhabeRef().opacity(0.7, 0.5, easeInOutCubic),
         sicherheitRef().opacity(1, 0.5, easeInOutCubic),
     )
@@ -173,7 +145,7 @@ export default makeScene2D(function* (view) {
     const zeitRef = createRef<Rect>();
 
     view.add(
-        <Rect layout gap={40} justifyContent={"start"} alignItems={"center"}>
+        <Rect layout gap={40} justifyContent={"start"} alignItems={"center"} x={400} y={-150}>
             <Rect ref={einschaetzungRef} width={0} clip>
                 <Img src="../assets/precision.svg" size={100} width={100}/>
             </Rect>
@@ -197,16 +169,25 @@ export default makeScene2D(function* (view) {
         zeitRef().opacity(1, 0.5, easeInOutCubic),
     )
 
+    yield* beginSlide("SicherheitStats")
+    const popupSicherheitRef = createRef<StatPopup>();
+    view.add(<StatPopup ref={popupSicherheitRef} image={"../assets/stats/technikvertrauen.png"} scale={0.8} y={200} x={400}/>);
+    yield* popupSicherheitRef().animateIn()
+
     yield* beginSlide("Soziale Risiken")
 
     yield* all(
         zeitRef().opacity(0, 0.5, easeInOutCubic),
         einschaetzungRef().opacity(0, 0.5, easeInOutCubic),
-        teilhabeRef().y(500, 0.5, easeInOutCubic),
-        sicherheitRef().y(500, 0.5, easeInOutCubic),
+        teilhabeRef().y(-100, 0.5, easeInOutCubic),
+        sicherheitRef().y(-100, 0.5, easeInOutCubic),
         teilhabeRef().opacity(0, 0.5, easeInOutCubic),
         sicherheitRef().opacity(0, 0.5, easeInOutCubic),
+        babyIconRef().opacity(0, 0.5, easeInOutCubic),
+        rollatorIconRef().opacity(0, 0.5, easeInOutCubic),
         title().text("Soziale Risiken", 0.5),
+        popupSeniorenRef().animateOut(),
+        popupSicherheitRef().animateOut()
     )
 
     const trolleyproblemsRef = createRef<Rect>();
@@ -228,11 +209,9 @@ export default makeScene2D(function* (view) {
     );
 
     const stauSicherheitStatRef = createRef<StatPopup>();
-    const technikvertrauenStatRef = createRef<StatPopup>();
     const akzeptanzStatRef = createRef<StatPopup>();
 
     view.add(<StatPopup ref={stauSicherheitStatRef} image={"../assets/stats/stau_und_sicherheit.png"}/>);
-    view.add(<StatPopup ref={technikvertrauenStatRef} image={"../assets/stats/technikvertrauen.png"}/>);
     view.add(<StatPopup ref={akzeptanzStatRef} image={"../assets/stats/akzeptanz.png"}/>);
 
     yield* beginSlide("Trolleyproblem")
@@ -244,9 +223,6 @@ export default makeScene2D(function* (view) {
     yield* akzeptanzStatRef().animateIn()
     yield* beginSlide("AkzeptanzStat1")
     yield* akzeptanzStatRef().animateOut()
-    yield* technikvertrauenStatRef().animateIn()
-    yield* beginSlide("AkzeptanzStat2")
-    yield* technikvertrauenStatRef().animateOut()
 
     yield* beginSlide("Überwachung")
     yield* ueberwachungRef().width(100, 0.5, easeInOutCubic)

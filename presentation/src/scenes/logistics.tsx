@@ -28,7 +28,7 @@ export default makeScene2D(function* (view) {
             <Txt fontSize={40} fontFamily={"Roboto"} fill={"white"} textAlign={"left"}
                  text={"Stefan Thömmes"}/>
             <Txt fontSize={25} fontFamily={"Roboto"} fill={"#ccc"} textAlign={"left"}
-                 text={"Operative Entwicklung \nTrans-o-Flex Express GmbH"}/>
+                 text={"Operative Entwicklung \ntrans-o-flex Express GmbH"}/>
         </Rect>
     </Rect>);
 
@@ -92,8 +92,8 @@ export default makeScene2D(function* (view) {
 
     const lkwRef = createRef<Img>();
     const trainRef = createRef<Img>();
-    view.add(<Img ref={lkwRef} src="../assets/truck.svg" size={100} radius={20} opacity={0} x={-100} y={50}/>);
-    view.add(<Img ref={trainRef} src="../assets/train.svg" size={100} radius={20} opacity={0} x={100} y={50}/>);
+    view.add(<Img ref={lkwRef} src="../assets/truck.svg" size={150} radius={20} opacity={0} x={-100} y={50}/>);
+    view.add(<Img ref={trainRef} src="../assets/train.svg" size={150} radius={20} opacity={0} x={100} y={50}/>);
 
     yield* all(
         delay(0.2, lkwRef().opacity(1, 0.5, easeInOutCubic)),
