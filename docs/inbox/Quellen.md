@@ -1,5 +1,5 @@
 - [**Autonomes Fahren und soziale Akzeptanz: konzeptionelle Überlegungen und empirische Einsichten**](80-Artikeltext-110-1-10-20220309.pdf) 
-	- Online (19.04.2024): https://journals.qucosa.de/jmv/article/view/79/69
+	- Online (19.04.2024): https://journals.qucosa.de/jmv/article/view/80/69
 - [Autonomes Fahren – Chancen und Herausforderungen](Autonomes%20Fahren%20-%20Chancen%20und%20Herausforderungen%20Zukunft%20Mobilität.pdf)
 	- Online (19.04.2024): https://www.zukunft-mobilitaet.net/170765/strassenverkehr/autonomes-fahren-chancen-und-herausforderungen-sae-level5/
 - [Der Haken ist bei uns im Kopf](Forscher%20über%20selbstfahrende%20Autos%20„Der%20Haken%20ist%20bei%20uns%20im%20Kopf“%20-%20taz.de.pdf)
@@ -14,4 +14,27 @@
 	- Online (13.05.2024): https://www.bmbf.de/SharedDocs/Publikationen/de/bmbf/5/24688_Aktionsplan_Forschung_fuer_autonomes_Fahren.pdf?__blob=publicationFile&v=3
 - [Wie sozial akzeptiert ist autonomes Fahren?](Wie%20sozial%20akzeptiert%20ist%20autonomes%20Fahren%20Forschungsinstitut%20für%20Nachhaltigkeit.pdf)
 	- Online (13.05.2024): https://www.rifs-potsdam.de/de/news/wie-sozial-akzeptiert-ist-autonomes-fahren
-- 
+- https://www.swarco.com/de/mobilitaet-der-zukunft/autonomes-fahren/autonomes-fahren-level
+	- Online (4.06.2024)
+- https://www.sae.org/standards/content/j3016_202104/
+	- Online (4.06.2024)
+- https://www.sae.org/blog/sae-j3016-update
+	- Online (4.06.2024)
+- https://t3n.de/news/autonomes-fahren-tempolimit-1524647/
+	- Online (4.06.2024)
+- https://www.adac.de/rund-ums-fahrzeug/ausstattung-technik-zubehoer/autonomes-fahren/recht/gesetz-zum-autonomen-fahren/
+	- Online (4.06.2024)
+- https://www.welt.de/regionales/rheinland-pfalz-saarland/article164340362/BASF-setzt-auf-autonomes-Fahren.html
+	- Online (4.06.2024)
+- https://germany.representation.ec.europa.eu/news/autonomes-fahren-neue-regeln-fur-fahrerassistenzsysteme-treten-kraft-2022-07-06_de
+	- Online (4.06.2024)
+- https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=PI_COM:Ares(2022)2667391
+	- Online (4.06.2024)
+- https://germany.representation.ec.europa.eu/news/autonomes-fahren-neue-regeln-fur-fahrerassistenzsysteme-treten-kraft-2022-07-06_de
+	- Online (4.06.2024)
+- https://www.deutschlandfunk.de/studie-zu-autonomem-fahren-aengste-vor-kontrollverlust-100.html
+	- Online (4.06.2024)
+- https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679
+	- Online (4.06.2024)
+- https://www.gesetze-im-internet.de/afgbv/BJNR098610022.html
+	- Online (4.06.2024)

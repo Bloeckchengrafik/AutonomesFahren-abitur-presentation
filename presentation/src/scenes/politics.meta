@@ -1,0 +1,18 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "EU 2019/2144",
+      "targetTime": 3.42219878272059
+    },
+    {
+      "name": "AFGBV",
+      "targetTime": 4.8388162684845115
+    },
+    {
+      "name": "DSGVO",
+      "targetTime": 6.2373693778581245
+    }
+  ],
+  "seed": 3221693556
+}

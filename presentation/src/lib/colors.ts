@@ -16,10 +16,14 @@ export const Theme = {
     bg: '#24211d',
     bgDark: '#0f0d0c',
     bgDarker: '#050404',
-    stroke: '#66615c',
+    stroke: '#86807b',
     radius: 8,
 };
 
 export const RED = '#ff6470';
 export const GREEN = '#99C47A';
 export const BLUE = '#68ABDF';
+
+export const DARK_RED = '#d34e59';
+export const DARK_GREEN = '#608149';
+export const DARK_BLUE = '#3472a4';
